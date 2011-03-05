@@ -1,0 +1,9 @@
+# Copyright 2011 Sergey Mironov <ierton@gmail.com>
+# Distributed under the terms of the GNU General Public License v2
+*sys-apps/ethtool
+*sys-apps/i2c-tools
+*sys-apps/pv
+*media-libs/gstreamer
+*media-plugins/gst-plugins-dvb
+*media-plugins/gst-plugins-mad
+*media-plugins/gst-plugins-mpeg2dec
