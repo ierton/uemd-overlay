@@ -1,3 +1,5 @@
+# All thsose are provided bu busybox 
+# See package.provided
 >sys-apps/coreutils-8.7
 >sys-apps/sed-4.2.1
 >app-admin/python-updater-0.8
@@ -5,3 +7,9 @@
 >sys-apps/portage-2.1.9.25
 >app-admin/eselect-1.2.11
 >app-admin/eselect-python-20100321
+
+# Should use early perl taken from openmoko overlay
+>dev-lang/perl-5.8.8-r9
+
+# Should use early libperl taken from openmoko overlay
+>sys-devel/libperl-5.8.8-r3
