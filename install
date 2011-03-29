@@ -1,0 +1,57 @@
+#!/bin/sh
+
+md_safe() {
+	test "$DRYRUN" = "yes" && { echo md $@ ; return 0 ; }
+	echo md $@
+	test -d "$1" || mkdir -p "$1"
+}
+
+rm_safe() {
+	test "$DRYRUN" = "yes" && { echo rm $@ ; return 0 ; }
+	echo rm $@
+	rm -f "$1"
+}
+
+ln_safe() {
+	test "$DRYRUN" = "yes" && { echo ln $@ ; return 0 ; }
+	echo ln $@
+	ln -s $@
+}
+
+die() {
+	echo `basename $THIS` : $@ >&2
+	exit -1
+}
+
+DRYRUN=yes
+THIS=$0
+PWD=`pwd`
+OVERLAY=$HOME/proj/uemd-overlay
+
+test "$1" = "-f" && DRYRUN=no
+
+test -d $OVERLAY || die "Overlay dir ($OVERLAY) not found. Fix the script."
+
+if [ "$DRYRUN" = "no" ] ; then
+	echo -n "Ready to create profile in $PWD. Press ENTER to continue."
+	read
+fi
+
+md_safe etc &&
+
+rm_safe etc/make.profile &&
+
+rm_safe etc/make.globals &&
+
+md_safe etc/portage &&
+
+rm_safe etc/portage/bashrc &&
+
+ln_safe $OVERLAY/profiles/uemd etc/make.profile &&
+
+md_safe etc/portage/package.keywords &&
+
+ln_safe ../../make.profile/package.keywords  etc/portage/package.keywords/default &&
+
+exit 0
+
