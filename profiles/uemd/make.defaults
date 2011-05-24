@@ -25,4 +25,5 @@ PKGDIR=${ROOT}packages/
 PORTAGE_TMPDIR=${ROOT}tmp/
 GENTOO_MIRRORS="http://mirror.yandex.ru/gentoo-distfiles/"
 
-ALSA_PCM_PLUGINS="*"
+ALSA_PCM_PLUGINS=all
+
