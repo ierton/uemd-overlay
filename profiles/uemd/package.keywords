@@ -1,3 +1,4 @@
 sys-apps/i2c-tools	~arm
 sys-apps/pv ~arm
 media-tv/linuxtv-dvb-apps ~arm
+media-tv/w_scan ~arm

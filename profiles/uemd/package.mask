@@ -14,5 +14,6 @@
 # Should use early libperl taken from openmoko overlay
 >sys-devel/libperl-5.8.8-r3
 
-# Use only checked LinuxTV dvb-apps
+# Use fixed version of dvb-tools
 >media-tv/linuxtv-dvb-apps-1.1.1.20100223
+>media-tv/w_scan-20101204.ebuild
