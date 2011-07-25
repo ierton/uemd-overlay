@@ -16,4 +16,4 @@
 
 # Use fixed version of dvb-tools
 >media-tv/linuxtv-dvb-apps-1.1.1.20100223
->media-tv/w_scan-20101204.ebuild
+>media-tv/w_scan-20101204
