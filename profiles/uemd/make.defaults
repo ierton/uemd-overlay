@@ -6,7 +6,7 @@ ROOT=/usr/${CHOST}/
 
 ACCEPT_KEYWORDS="arm"
 
-NOUSE="-gpm -nls -introspection -unicode -git -openmp -ipv6 -python -acl -orc"
+NOUSE="-gpm -nls -introspection -unicode -git -openmp -ipv6 -python -acl -orc -examples"
 USE="${ARCH} ${USE} ${NOUSE} minimal zlib bindist make-symlinks openct readline nocxx"
 
 VIDEO_CARDS="fbdev"
