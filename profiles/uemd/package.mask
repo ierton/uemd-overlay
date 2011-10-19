@@ -17,3 +17,14 @@
 # Use fixed version of dvb-tools
 >media-tv/linuxtv-dvb-apps-1.1.1.20100223
 >media-tv/w_scan-20101204
+
+# Gstreamer-related things
+>dev-libs/glib-2.24.2
+>media-libs/gstreamer-0.10.31
+>media-libs/gst-plugins-base-0.10.31
+>media-plugins/gst-plugins-a52dec-0.10.16
+>media-plugins/gst-plugins-alsa-0.10.31
+>media-plugins/gst-plugins-dvb-0.10.19
+>media-plugins/gst-plugins-mad-0.10.16
+>media-plugins/gst-plugins-mpeg2dec-0.10.16
+
