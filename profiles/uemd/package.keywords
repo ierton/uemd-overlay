@@ -3,3 +3,4 @@ sys-apps/pv ~arm
 media-tv/linuxtv-dvb-apps ~arm
 media-tv/w_scan ~arm
 =dev-lang/v8-3.6.4 ~arm
+=net-libs/nodejs-0.6.7 ~arm

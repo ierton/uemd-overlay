@@ -19,6 +19,7 @@ KEYWORDS="~x86 ~amd64 ~arm"
 IUSE=""
 
 DEPEND=">=dev-lang/v8-3.5.10.22
+	<dev-lang/v8-3.7
 	dev-libs/openssl"
 RDEPEND="${DEPEND}"
 
@@ -30,10 +31,6 @@ src_configure() {
 
 		local ROOT=/usr/$CHOST
 
-		export CFLAGS=${CFLAGS}
-		export CXXFLAGS=${CXXFLAGS}
-		export CPPFLAGS=${CPPFLAGS}
-		export LDFLAGS=${LDFLAGS}
 		export AR=$(tc-getAR)
 		export AS=$(tc-getAS)
 		export CC=$(tc-getCC)
@@ -48,11 +45,11 @@ src_configure() {
 			--shared-v8 \
 			--shared-v8-includes=$ROOT/usr/include \
 			--shared-v8-libpath=$ROOT/usr/lib \
+			--prefix=/usr \
+			--dest-cpu=${ARCH} \
 			--openssl-includes=$ROOT/usr/include \
 			--openssl-libpath=$ROOT/usr/lib \
-			--prefix=/usr \
-			--dest-cpu=${ARCH} || die
-
+			--without-snapshot || die
 	else
 		# this is a waf confuserator
 		# What about --shared-openssl
@@ -66,6 +63,7 @@ src_compile() {
 }
 
 src_install() {
+	# FIXME: remove docs from /usr/lib/node_modules
 	emake DESTDIR="${D}" install || die
 }
 
