@@ -21,7 +21,7 @@ SRC_URI="http://get.qt.nokia.com/qt/source/${MY_P}.tar.gz"
 
 LICENSE="|| ( GPL-2 GPL-3 ) "
 SLOT="0"
-KEYWORDS="arm"
+KEYWORDS="~arm"
 IUSE=""
 
 DEPEND=""
